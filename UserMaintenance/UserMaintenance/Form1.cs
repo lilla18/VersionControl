@@ -24,6 +24,7 @@ namespace UserMaintenance
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
             listBox1.DisplayMember = "FullName";
+            button3.Text = Resource1.Delete;
         }
         BindingList<Entities.User> users = new BindingList<Entities.User>();
 
@@ -50,6 +51,12 @@ namespace UserMaintenance
                     sw.Write("\n");
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var torlendo = ((User)listBox1.SelectedItem);
+            users.Remove(torlendo);
         }
     }
 }
