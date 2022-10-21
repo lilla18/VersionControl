@@ -16,9 +16,12 @@ namespace het6
     {
 
         BindingList<Entities.RateData> Rates = new BindingList<Entities.RateData>();
+        BindingList<string> Currencies = new BindingList<string>();
+        
         public Form1()
         {
             InitializeComponent();
+            GetCurrencies();
             RefreshData();
         }
 
@@ -86,6 +89,15 @@ namespace het6
             dataGridView1.DataSource = Rates;
             Otodik();
             Hatodik();
+        }
+
+        private void GetCurrencies()
+        {
+            
+
+
+            comboBox1.DataSource = Currencies;
+
         }
 
 
