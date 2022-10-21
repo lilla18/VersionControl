@@ -12,10 +12,13 @@ namespace het6
 {
     public partial class Form1 : Form
     {
+
+        BindingList<Entities.RateData> Rates = new BindingList<Entities.RateData>();
         public Form1()
         {
             InitializeComponent();
             harmadik();
+            dataGridView1.DataSource = Rates;
         }
 
         private void harmadik()
@@ -30,6 +33,11 @@ namespace het6
 
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
