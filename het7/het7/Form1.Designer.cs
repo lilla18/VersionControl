@@ -33,10 +33,17 @@ namespace het7
             this.mainPanel = new System.Windows.Forms.Panel();
             this.createTimer = new System.Windows.Forms.Timer(this.components);
             this.conveyorTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonCar = new System.Windows.Forms.Button();
+            this.buttonBall = new System.Windows.Forms.Button();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.buttonBall);
+            this.mainPanel.Controls.Add(this.buttonCar);
+            this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
@@ -55,6 +62,35 @@ namespace het7
             this.conveyorTimer.Interval = 10;
             this.conveyorTimer.Tick += new System.EventHandler(this.conveyorTimer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(212, 320);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Coming next:";
+            // 
+            // buttonCar
+            // 
+            this.buttonCar.Location = new System.Drawing.Point(157, 354);
+            this.buttonCar.Name = "buttonCar";
+            this.buttonCar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCar.TabIndex = 1;
+            this.buttonCar.Text = "Car";
+            this.buttonCar.UseVisualStyleBackColor = true;
+            this.buttonCar.Click += new System.EventHandler(this.buttonCar_Click);
+            // 
+            // buttonBall
+            // 
+            this.buttonBall.Location = new System.Drawing.Point(262, 354);
+            this.buttonBall.Name = "buttonBall";
+            this.buttonBall.Size = new System.Drawing.Size(75, 23);
+            this.buttonBall.TabIndex = 2;
+            this.buttonBall.Text = "Ball";
+            this.buttonBall.UseVisualStyleBackColor = true;
+            this.buttonBall.Click += new System.EventHandler(this.buttonBall_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,6 +99,8 @@ namespace het7
             this.Controls.Add(this.mainPanel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -72,6 +110,9 @@ namespace het7
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Timer createTimer;
         private System.Windows.Forms.Timer conveyorTimer;
+        private System.Windows.Forms.Button buttonBall;
+        private System.Windows.Forms.Button buttonCar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
