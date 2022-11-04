@@ -15,6 +15,7 @@ namespace het7
         private Abstractions.Toy _nextToy;
         private List<Abstractions.Toy> _toys = new List<Abstractions.Toy>();
         private Abstractions.IToyFactory _factory;
+        
 
         public Abstractions.IToyFactory Factory
         {
@@ -77,6 +78,17 @@ namespace het7
             _nextToy.Top = label1.Top + label1.Height + 20;
             _nextToy.Left = label1.Left;
             Controls.Add(_nextToy);
+        }
+
+        private void buttonRed_Click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var colorPicker = new ColorDialog();
+
+            colorPicker.Color = button.BackColor;
+            if (colorPicker.ShowDialog() != DialogResult.OK)
+                return;
+            button.BackColor = colorPicker.Color;
         }
     }
 }

@@ -36,11 +36,13 @@ namespace het7
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCar = new System.Windows.Forms.Button();
             this.buttonBall = new System.Windows.Forms.Button();
+            this.buttonRed = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.buttonRed);
             this.mainPanel.Controls.Add(this.buttonBall);
             this.mainPanel.Controls.Add(this.buttonCar);
             this.mainPanel.Controls.Add(this.label1);
@@ -91,6 +93,16 @@ namespace het7
             this.buttonBall.UseVisualStyleBackColor = true;
             this.buttonBall.Click += new System.EventHandler(this.buttonBall_Click);
             // 
+            // buttonRed
+            // 
+            this.buttonRed.BackColor = System.Drawing.Color.Red;
+            this.buttonRed.Location = new System.Drawing.Point(394, 353);
+            this.buttonRed.Name = "buttonRed";
+            this.buttonRed.Size = new System.Drawing.Size(75, 23);
+            this.buttonRed.TabIndex = 3;
+            this.buttonRed.UseVisualStyleBackColor = false;
+            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +125,7 @@ namespace het7
         private System.Windows.Forms.Button buttonBall;
         private System.Windows.Forms.Button buttonCar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonRed;
     }
 }
 
